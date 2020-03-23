@@ -64,11 +64,11 @@ weight = 2
 ######################### Default Parameters ###########################
 [params]
 # home
-home = "Home"
+home = "Inicio"
 # logo
-logo = "images/logo.svg"
+logo = "images/logo.png"
 # meta data
-author = "Themefisher"
+author = "José Cruz Rincón Medina"
 description = "This is meta description"
 # google tag manager
 google_tag_manager = "" # your id
@@ -77,7 +77,7 @@ google_analitycs_id = "" # your id
 # contact form action
 contact_form_action = "#" # contact form works with : https://formspree.io
 # copyright
-copyright = "&copy; 2020 [Gethugothemes](https://gethugothemes.com) All Rights Reserved"
+copyright = "Elaborado con [Hugo](https://www.gohugo.io) - Hospedado en [Netlify](https://www.netlify.com) - Código servido desde [Github](https://www.github.com) - Contenido administrado desde [Forestry](https://www.forestry.io) - Esta obra está bajo una [licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional](http://creativecommons.org/licenses/by-nc-sa/4.0/deed.es)" 
 
 # preloader
 [params.preloader]
@@ -111,13 +111,13 @@ link = "https://gethugothemes.com/shop/"
 ############################## Social Site ##########################
 [[params.social]]
 icon = "ti-facebook" # themify icon pack https://themify.me/themify-icons
-link = "#"
+link = "facebook.com/nefrovital"
 [[params.social]]
 icon = "ti-twitter-alt" # themify icon pack https://themify.me/themify-icons
-link = "#"
+link = "twitter.com/nefrovital"
 [[params.social]]
-icon = "ti-github" # themify icon pack https://themify.me/themify-icons
-link = "#"
+icon = "ti-instagram" # themify icon pack https://themify.me/themify-icons
+link = "instagram.com/nefrovital"
 [[params.social]]
 icon = "ti-linkedin" # themify icon pack https://themify.me/themify-icons
-link = "#"
+link = "linkedin.com/company/nefrovital"

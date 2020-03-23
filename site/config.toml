@@ -1,5 +1,5 @@
 ############################ Default configuration #########################
-baseURL = "/"
+baseURL = "https://www.nefrovital.com"
 languageCode = "es-es"
 # site title 
 title = "Nefrovital"
@@ -10,7 +10,7 @@ paginate = "5"
 # post excerpt
 summaryLength = "10"
 # disqus short name
-disqusShortname = "" # get your shortname form here : https://disqus.com
+disqusShortname = "nefrovital" # get your shortname form here : https://disqus.com
 
 [outputs]
 home = ["HTML", "AMP", "RSS", "JSON"]
@@ -71,11 +71,11 @@ logo = "images/logo.png"
 author = "José Cruz Rincón Medina"
 description = "This is meta description"
 # google tag manager
-google_tag_manager = "" # your id
+google_tag_manager = "GTM-NDPK93W" # your id
 # google analitycs ID
-google_analitycs_id = "" # your id
+google_analitycs_id = "UA-161729911-1" # your id
 # contact form action
-contact_form_action = "#" # contact form works with : https://formspree.io
+contact_form_action = "https://formspree.io/mgezrakr" # contact form works with : https://formspree.io
 # copyright
 copyright = "Elaborado con [Hugo](https://www.gohugo.io) - Hospedado en [Netlify](https://www.netlify.com) - Código servido desde [Github](https://www.github.com) - Contenido administrado desde [Forestry](https://www.forestry.io) - Esta obra está bajo una [licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional](http://creativecommons.org/licenses/by-nc-sa/4.0/deed.es)" 
 
@@ -111,13 +111,13 @@ link = "https://gethugothemes.com/shop/"
 ############################## Social Site ##########################
 [[params.social]]
 icon = "ti-facebook" # themify icon pack https://themify.me/themify-icons
-link = "facebook.com/nefrovital"
+link = "https://www.facebook.com/nefrovital"
 [[params.social]]
 icon = "ti-twitter-alt" # themify icon pack https://themify.me/themify-icons
-link = "twitter.com/nefrovital"
+link = "https://www.twitter.com/nefrovital"
 [[params.social]]
 icon = "ti-instagram" # themify icon pack https://themify.me/themify-icons
-link = "instagram.com/nefrovital"
+link = "https://www.instagram.com/nefrovital"
 [[params.social]]
 icon = "ti-linkedin" # themify icon pack https://themify.me/themify-icons
-link = "linkedin.com/company/nefrovital"
+link = "https://www.linkedin.com/company/nefrovital"

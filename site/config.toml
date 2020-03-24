@@ -119,5 +119,8 @@ link = "https://www.twitter.com/nefrovital"
 icon = "ti-instagram" # themify icon pack https://themify.me/themify-icons
 link = "https://www.instagram.com/nefrovital"
 [[params.social]]
+icon = "ti-youtube" # themify icon pack https://themify.me/themify-icons
+link = "youtube"
+[[params.social]]
 icon = "ti-linkedin" # themify icon pack https://themify.me/themify-icons
 link = "https://www.linkedin.com/company/nefrovital"

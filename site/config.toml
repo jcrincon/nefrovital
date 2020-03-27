@@ -1,5 +1,6 @@
 ############################ Default configuration #########################
 baseURL = "https://www.nefrovital.com"
+#baseURL = "/"
 languageCode = "es-es"
 # site title 
 title = "Nefrovital"
@@ -77,7 +78,7 @@ google_analitycs_id = "UA-161729911-1" # your id
 # contact form action
 contact_form_action = "https://formspree.io/mgezrakr" # contact form works with : https://formspree.io
 # copyright
-copyright = "Elaborado con [Hugo](https://www.gohugo.io) - Hospedado en [Netlify](https://www.netlify.com) - Código servido desde [Github](https://www.github.com) - Contenido administrado desde [Forestry](https://www.forestry.io) - Esta obra está bajo una [licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional](http://creativecommons.org/licenses/by-nc-sa/4.0/deed.es)" 
+copyright = "Elaborado con [Hugo](https://www.gohugo.io) - Hospedado en [Netlify](https://www.netlify.com) - Código servido desde [Github](https://www.github.com) - Contenido administrado desde [Forestry](https://www.forestry.io) <br>- Esta obra está bajo una [licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional](http://creativecommons.org/licenses/by-nc-sa/4.0/deed.es)" 
 
 # preloader
 [params.preloader]
@@ -92,8 +93,8 @@ enable = true
 ####################### banner #######################################
 [params.banner]
 bgImage = "images/banner/banner-bg.svg"
-title = "Hi, I'm John Smith Doe. <br> I help people make the  worlds best software"
-image = "images/banner/illustration.svg"
+title = "Hola, mi nombre es José Cruz Rincón. <br> Soy Nefrólogo, Internista y Médico Educador."
+image = "images/banner/physician.svg"
 
 
 ######################## call to action ###############################

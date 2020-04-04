@@ -1,7 +1,8 @@
 ############################ Default configuration #########################
-baseURL = "https://www.nefrovital.com"
-#baseURL = "/"
+#baseURL = "https://www.nefrovital.com"
+baseURL = "/"
 languageCode = "es-es"
+DefaultContentLanguage = "es"
 # site title 
 title = "Nefrovital"
 # theme
@@ -12,6 +13,10 @@ paginate = "5"
 summaryLength = "10"
 # disqus short name
 disqusShortname = "nefrovital" # get your shortname form here : https://disqus.com
+enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
+canonifyURLs = true
 
 [outputs]
 home = ["HTML", "AMP", "RSS", "JSON"]
@@ -75,10 +80,26 @@ description = "This is meta description"
 google_tag_manager = "GTM-NDPK93W" # your id
 # google analitycs ID
 google_analitycs_id = "UA-161729911-1" # your id
+# Github profile
+github = "https://github.com/jcrincon"
+# Facebook profile
+facebook = "https://facebook.com/nefrovital"
+# Facebook Opengraph image
+og_image = "/images/ideotipo.png"
+# Site Name
+sitename = "Nefrovital"
+# Twitter profile
+twitter = "@nefrovital"
 # contact form action
 contact_form_action = "https://formspree.io/mgezrakr" # contact form works with : https://formspree.io
 # copyright
 copyright = "Elaborado con [Hugo](https://www.gohugo.io) - Hospedado en [Netlify](https://www.netlify.com) - Código servido desde [Github](https://www.github.com) - Contenido administrado desde [Forestry](https://www.forestry.io) <br>- Esta obra está bajo una [licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional](http://creativecommons.org/licenses/by-nc-sa/4.0/deed.es)" 
+
+[languages]
+  [languages.es]
+    languageName = "Spanish"
+    languageCode = "es-es"
+    weight = 1
 
 # preloader
 [params.preloader]
@@ -99,7 +120,7 @@ image = "images/banner/physician.svg"
 
 ######################## call to action ###############################
 [params.cta]
-enable = true
+enable = false
 image = "images/hugo-muscot.svg"
 title = "Get the best hugo templates"
 description = "Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -121,7 +142,7 @@ icon = "ti-instagram" # themify icon pack https://themify.me/themify-icons
 link = "https://www.instagram.com/nefrovital"
 [[params.social]]
 icon = "ti-youtube" # themify icon pack https://themify.me/themify-icons
-link = "youtube"
+link = "https://www.nefrovital.com/youtube"
 [[params.social]]
 icon = "ti-linkedin" # themify icon pack https://themify.me/themify-icons
 link = "https://www.linkedin.com/company/nefrovital"

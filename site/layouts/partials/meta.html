@@ -1,0 +1,165 @@
+{{ "<!--Title Tags-->" | safeHTML }}
+<title itemprop="name">{{ .Title }} | {{ .Site.Title }}</title>
+<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta itemprop="name" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta name="application-name" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta property="og:site_name" content="{{ .Site.Params.sitename }}" />
+
+{{ "<!--Description Tags-->" | safeHTML }}
+<meta name="description" content="{{ .Params.description }}" />
+<meta itemprop="description" content="{{ .Params.description }}" />
+<meta property="og:description" content="{{ .Params.description }}" />
+<meta name="twitter:description" content="{{ .Params.description }}" />
+
+{{ "<!--Link Tags-->" | safeHTML }}
+<base href="{{ .Permalink }}">
+<link rel="canonical" href="{{ .Permalink }}" itemprop="url" /> 
+<meta name="url" content="{{ .Permalink }}" />
+<meta name="twitter:url" content="{{ .Permalink }}" /> 
+<meta property="og:url" content="{{ .Permalink }}" />
+
+{{ "<!--Language Tags-->" | safeHTML }}
+<meta property="og:locale" content="{{ .Language.Lang }}">
+<meta name="language" content="{{ .Language.LanguageName }}">
+{{ range .AllTranslations }}
+  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+{{ end }}
+
+{{ "<!--Post Tags-->" | safeHTML }}
+{{ if .Type | eq "post" }}
+  <meta property="og:type" content="article" />
+  <meta property="article:publisher" content="{{ .Site.Params.facebook }}" /> 
+  <meta property="og:article:published_time" content={{ .Date.Format "2006-01-02T15:04:05Z0700" | safeHTML }} /> 
+  <meta property="article:published_time" content={{ .Date.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
+
+  {{ with.Site.Params.author }} 
+    <meta property="og:article:author" content="{{ . }}" />
+    <meta property="article:author" content="{{ . }}" /> 
+    <meta name="author" content="{{ . }}" /> 
+  {{ end }}
+
+  {{ with.Params.category }} 
+    <meta name="news_keywords" content="{{ index . 0 }}" />
+    <meta property="article:section" content="{{ index . 0 }}" /> 
+  {{ end }}
+
+  <script defer type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "headline": {{ .Title }},
+      "author": {
+        "@type": "Person",
+        "name": "{{ .Site.Params.facebook }}"
+      },
+      "datePublished": "{{ .Date.Format "2006-01-02" }}",
+      "description": {{ .Description }},
+      "wordCount": {{ .WordCount }},
+      "mainEntityOfPage": "True",
+      "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+      "image": {
+        "@type": "imageObject",
+        "url": "{{ with .Params.image }}{{ . }}{{ end }}"
+        },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ .Site.Title }}",
+        "logo": {
+          "@type": "imageObject",
+          "url": "https://www.nefrovital.com/images/favicon.png"
+        }
+      }
+    }
+  </script>
+{{ end }}
+
+{{ "<!--Page Tags-->" | safeHTML }}
+{{ if or (.Type | ne "post") (.IsHome) }}
+  <meta property="og:type" content="website" /> 
+  <meta name="author" content="{{ .Site.Params.author }}" />
+  <script defer type="application/ld+json">
+    { 
+      "@context": "http://schema.org", 
+      "@type": "WebSite", 
+      "url": "{{ .Permalink }}", 
+      "sameAs": [
+        "{{ .Site.Params.facebook }}", 
+        "{{ .Site.Params.twitter }}"
+      ], 
+      "name": "{{ .Title }}", 
+      "logo": "https://www.nefrovital.com/images/favicon.png" 
+    }
+  </script>
+{{ end }}
+
+{{ "<!--Image Tags-->" | safeHTML }}
+{{ with .Params.image }} 
+  <meta itemprop="image" content="{{ . | absURL }}" />
+  <meta property="og:image" content="{{ . | absURL }}" /> 
+  <meta name="twitter:image" content="{{ . | absURL }}" />
+  <meta name="twitter:image:src" content="{{ . | absURL }}" /> 
+{{ else }}
+  <meta itemprop="image" content="{{ .Site.Params.ogimage | absURL }}" />
+  <meta property="og:image" content="{{ .Site.Params.ogimage | absURL }}" />
+  <meta name="twitter:image" content="{{ .Site.Params.ogimage | absURL }}" />
+  <meta name="twitter:image:src" content="{{ .Site.Params.ogimage | absURL }}" /> 
+{{ end }}
+
+{{ "<!--Date Tags-->" | safeHTML }}
+<meta property="og:updated_time" content={{ .Lastmod.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
+
+{{ "<!--Sitemap & RSS Feed Tags-->" | safeHTML }}
+<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ .Site.BaseURL }}sitemap.xml" /> 
+{{ with .OutputFormats.Get "RSS" }}
+  <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+{{ end }}
+
+{{ "<!--Search Engine Crawler Tags-->" | safeHTML }}
+<meta name="robots" content="index,follow" /> 
+<meta name="googlebot" content="index,follow" />
+
+{{ "<!--Specific Social Media Tags-->" | safeHTML }}
+<meta name="twitter:site" content="{{ .Site.Params.twitter }}">
+<meta name="twitter:creator" content="{{ .Site.Params.twitter }}" />
+<meta property="fb:app_id" content="242843800440095" />
+<meta property="fb:admins" content="516047075723286" />
+
+{{ "<!--Manifest File Tag-->" | safeHTML }}
+<link rel="manifest" href="{{ .Site.BaseURL }}manifest.json" />
+
+{{ "<!--Theme Color Tags-->" | safeHTML }}
+<meta name="theme-color" content="#E8505B" /> 
+<meta name="msapplication-TileColor" content="#E8505B" />
+
+{{ "<!--Misc Tags-->" | safeHTML }}
+<meta name="keywords" content="Nefrologia, Medicina, Educacion" />
+<meta name="imagemode" content="force" />
+<meta name="coverage" content="Worldwide" /> 
+<meta name="distribution" content="Global" />
+<meta name="HandheldFriendly" content="True" /> 
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="apple-mobile-web-app-title" content="{{ .Site.Params.sitename }}" /> 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-touch-fullscreen" content="yes" /> 
+
+{{ "<!--Favicon Tags-->" | safeHTML }}
+<link rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="manifest" href="/images/manifest.json">
+<meta name="msapplication-TileColor" content="#E8505B">
+<meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png">
+<meta name="theme-color" content="#E8505B">

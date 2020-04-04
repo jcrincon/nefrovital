@@ -1,6 +1,6 @@
 ############################ Default configuration #########################
-#baseURL = "https://www.nefrovital.com"
-baseURL = "/"
+baseURL = "https://www.nefrovital.com"
+#baseURL = "/"
 languageCode = "es-es"
 DefaultContentLanguage = "es"
 # site title 
